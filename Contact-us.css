@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    border: 2px solid #9453a6;
+}
+
+.navbar {
+    background-color: #f2cc0f !important;
+}
+
+#imgLogo {
+    width: 80px;
+}
+
+.navbar ul li a {
+    font-size: 1.5em;
+    font-family: 'Pattaya';
+}
+
+#Contacttitle h1 {
+    position: relative;
+    padding: 0;
+    margin: 15px 0px 0px 0px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 4vw;
+    color: #0d0d0d;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+#Contacttitle h1:before {
+    width: 30px;
+    height: 5px;
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    margin-left: -14px;
+    background-color: #b80000;
+}
+
+#Contacttitle h1:after {
+    width: 100px;
+    height: 1px;
+    display: block;
+    content: "";
+    position: relative;
+    margin-top: 25px;
+    left: 50%;
+    margin-left: -50px;
+    background-color: #b80000;
+}
+
+.form-Contact {
+    margin: 10px 10px 30px 10px;
+}
+
+.input-group {
+    width: 50%;
+    margin: 10px;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #8cbf3f;
+    color: #f2f2f2;
+}
+
+.moreInformation {
+    display: flex;
+    width: 90%;
+    height: 350px;
+    margin: auto;
+    padding: 7px;
+    background-image: url(images/ContactUs.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.newOrelans {
+    flex: 50%;
+    padding: 10px;
+    height: 300px;
+
+}
+
+h4 {
+    font-size: 2vw;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.the-footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #f2cc0f;
+}
+
+.the-footer .social {
+    text-align: center;
+    padding-bottom: 10px;
+
+}
+
+.the-footer .social>a {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #f2cc0f;
+    color: #0d0d0d;
+    transition-delay: 0.5s;
+}
+
+.the-footer .social>a:hover {
+    opacity: 0.5;
+}
+
+.the-footer .copyright {
+    text-align: center;
+    font-size: 13px;
+    color: #9453a6;
+    margin-bottom: 0;
+}

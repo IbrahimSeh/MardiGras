@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="Media.css">
+    <link rel="shortcut icon" href="./images/mardiGrasIcon.png">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-info">
+            <div class="container-fluid">
+                <img id="imgLogo" src="images/mardiGrasIcon.png" alt="logo">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="About.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Media.html">Media</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="FAQ.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Contact-us.html">Contact us</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="Mediatitle">
+            <h1>Media</h1>
+        </div>
+        <div class="Gallery">
+            <h3>Gallery</h3>
+            <div class="Lightbox">
+                <div class="card"><img id="one" src="images/800px-The_Carnival_at_New_Orleans-About.jpg"
+                        alt="The_Carnival_at_New_Orleans" onclick="currentSlide(1);openModal(id);"
+                        class="hover-shadow cursor"></div>
+                <div class="card"><img id="tow" src="images/Ace Hotel New Orleans.jpg" alt="Ace Hotel New Orleans"
+                        onclick="currentSlide(2);openModal(id);" class="hover-shadow cursor"></div>
+                <div class="card"><img id="three" src="images/Haunted Museum.jpg" alt="Haunted Museum"
+                        onclick="currentSlide(3); openModal(id);" class="hover-shadow cursor"></div>
+                <div class="card"><img id="four" src="images/Louisiana Children's Museum.jpg"
+                        alt="Louisiana Children's Museum" onclick="currentSlide(4);openModal(id);"
+                        class="hover-shadow cursor"></div>
+                <div class="card"><img id="five" src="images/Mardi_Gras_Parade,_New_Orleans,_Louisiana_(LOC)-About.jpg"
+                        alt="_New_Orleans,_Louisiana" onclick="currentSlide(5);openModal(id);"
+                        class="hover-shadow cursor">
+                </div>
+                <div class="card"><img id="six" src="images/Museum of Death.jpg" alt="Museum of Death"
+                        onclick="currentSlide(6);openModal(id);" class="hover-shadow cursor"></div>
+                <div class="card"><img id="seven" src="images/pexels-hitesh-choudhary-1144283.jpg"
+                        alt="pexels-hitesh-choudhary" onclick="currentSlide(7);openModal(id);"
+                        class="hover-shadow cursor"></div>
+                <div class="card"><img id="eight" src="images/pexels-mali-maeder-335692.jpg" alt="pexels-mali-maeder"
+                        onclick="currentSlide(8);openModal(id);" class="hover-shadow cursor"></div>
+                <div class="card"><img id="nine" src="images/pexels-mikhail-nilov-9392056.jpg"
+                        alt="pexels-mikhail-nilov" onclick="currentSlide(9);openModal(id);" class="hover-shadow cursor">
+                </div>
+
+                <div class="card"><img id="ten" src="images/pexels-mikhail-nilov-9392087.jpg" alt="pexels-mikhail-nilov"
+                        onclick="currentSlide(10);openModal(id);" class="hover-shadow cursor">
+                </div>
+
+                <!-- src="images/pexels-mikhail-nilov-9392087.jpg" -->
+                <div class="card"><img id="eleven" src="images/pexels-mikhail-nilov-9393304.jpg"
+                        alt="pexels-mikhail-nilov" onclick="currentSlide(11);openModal(id);"
+                        class="hover-shadow cursor">
+                </div>
+                <div class="card"><img id="twelve" src="images/pexels-ulises-peña-12281192.jpg" alt="pexels-ulises-peña"
+                        onclick="currentSlide(12);openModal(id);" class="hover-shadow cursor"></div>
+                <div class="card"><img id="thirteen" src="images/Walk-On's Bistreaux and Bar.jpg"
+                        alt="Walk-On's Bistreaux and Bar" onclick="currentSlide(13);openModal(id);"
+                        class="hover-shadow cursor"></div>
+                <div class="card"><img id="fourteen" src="images/The Ritz-Carlton, New Orleans.jpg"
+                        alt="The Ritz-Carlton, New Orleans" onclick="currentSlide(14);openModal(id);"
+                        class="hover-shadow cursor"></div>
+                <div class="card"><img id="fifteen" src="images/Sheraton New Orleans Hotel.jpg"
+                        alt="Sheraton New Orleans Hotel" onclick="currentSlide(15);openModal(id);"
+                        class="hover-shadow cursor"></div>
+            </div>
+
+
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <div class="numbertext"></div>
+                <img class="modal-content" id="imgModal">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div id="caption"></div>
+                <div class="rowOfImgs">
+                    <div class="card"><img id="sixteen" src="" alt="" onclick="currentBottomSlide(-3);openModal(id);">
+                    </div>
+                    <div class="card"><img id="seventeen" src="" alt="" onclick="currentBottomSlide(-2);openModal(id);">
+                    </div>
+                    <div class="card"><img id="eighteen" src="" alt="" onclick="currentBottomSlide(-1);openModal(id);">
+                    </div>
+                    <div class="card"><img id="nineteen" src="" alt="" onclick="currentBottomSlide(0);openModal(id);">
+                    </div>
+                    <div class="card"><img id="twenty" src="" alt="" onclick="currentBottomSlide(1);openModal(id);">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="videos">
+            <h3>Mardi Gras in New Orleans - Youtube</h3>
+            <div class="MardiGrasYoutube">
+                <iframe src="https://www.youtube.com/embed/R2v3E00bceo?autoplay=1&mute=1" frameborder="0"></iframe>
+            </div>
+            <div class="MardiGrasYoutube">
+                <iframe src="https://www.youtube.com/embed/EkIZwXbSh-Y?autoplay=1&mute=1" frameborder="0"></iframe>
+            </div>
+            <div class="MardiGrasYoutube">
+                <iframe src="https://www.youtube.com/embed/KlgrhGyhmG8?autoplay=1&mute=1" frameborder="0"></iframe>
+            </div>
+        </div> -->
+
+    </main>
+    <div class="the-footer">
+        <div class="social">
+            <a href="https://www.facebook.com/abrahem.seh">
+                <i class="icon ion-social-facebook"></i>
+            </a>
+            <a href="https://wa.me/+972522740589?text=Welcome%20every%20body">
+                <i class="icon ion-social-whatsapp"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ibrahim-seh-23b935157/">
+                <i class="icon ion-social-linkedin"></i>
+            </a>
+        </div>
+        <p class="copyright">Website design and construction by Ibrahim Seh ©</p>
+    </div>
+    <script src="Media.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

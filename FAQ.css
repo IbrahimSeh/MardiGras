@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    border: 2px solid #9453a6;
+}
+
+main {
+    background-image: url(images/fleur-de-lis-bg-FAQ.png);
+}
+
+.navbar {
+    background-color: #f2cc0f !important;
+    margin-bottom: 0;
+}
+
+#imgLogo {
+    width: 80px;
+}
+
+.navbar ul li a {
+    font-size: 1.5em;
+    font-family: 'Pattaya';
+}
+
+#FAQtitle h1 {
+    position: relative;
+    padding: 0;
+    margin: 15px 0px 0px 0px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: #0d0d0d;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+#FAQtitle h1:before {
+    width: 30px;
+    height: 5px;
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    margin-left: -14px;
+    background-color: #b80000;
+}
+
+#FAQtitle h1:after {
+    width: 100px;
+    height: 1px;
+    display: block;
+    content: "";
+    position: relative;
+    margin-top: 25px;
+    left: 50%;
+    margin-left: -50px;
+    background-color: #b80000;
+}
+
+.FAQ {
+    margin: 10px;
+    border: 2px solid #9453a6;
+    border-radius: 5px;
+}
+
+.collapsible {
+    background-color: rgb(140, 191, 63, 0.8);
+    color: #f1f1f1;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 1.8rem;
+
+}
+
+.collapsible:hover {
+    background-color: #9453a6;
+    color: #0d0d0d;
+}
+
+.glyphicon {
+    float: left;
+    color: #f2cc0f;
+    margin: 0px 5px 0px 0px;
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-out;
+    background-color: rgb(242, 242, 242, 0.25);
+    color: #0d0d0d;
+    font-family: 'Pattaya';
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.the-footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #f2cc0f;
+}
+
+.the-footer .social {
+    text-align: center;
+    padding-bottom: 10px;
+
+}
+
+.the-footer .social>a {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #f2cc0f;
+    color: #0d0d0d;
+    transition-delay: 0.5s;
+}
+
+.the-footer .social>a:hover {
+    opacity: 0.5;
+}
+
+.the-footer .copyright {
+    text-align: center;
+    font-size: 13px;
+    color: #9453a6;
+    margin-bottom: 0;
+}
