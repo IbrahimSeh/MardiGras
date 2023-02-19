@@ -5,10 +5,19 @@ function openModal(imgId) {
     let imgInModal = document.getElementById("imgModal");
     let captionText = document.getElementById("caption");
 
+    let sixteenImg = document.getElementById("sixteen");
+    let seventeenImg = document.getElementById("seventeen");
+    let eighteenImg = document.getElementById("eighteen");
+    let nineteenImg = document.getElementById("nineteen");
+    let twentyImg = document.getElementById("twenty");
+
+    let numberArr = ["one", "tow", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"];
+    let before2, before1, after2, after1;
+
     modalDiv.style.display = "block";
-    imgInModal.src = imgToShow.src;
-    // console.log(imgToShow);
-    // console.log(imgToShow.src);
+
+    imgInModal.src = document.getElementById(numberArr[slideIndex]).src;
+
     captionText.innerHTML = imgToShow.alt;
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
@@ -22,24 +31,16 @@ function openModal(imgId) {
     if (slideIndex > 14) { slideIndex -= 14; }
     if (slideIndex < 0) { slideIndex += 15; }
 
+    number.innerHTML = (slideIndex + 1 + "/15");
 
-    number.innerHTML = (slideIndex + "/15");
-
-    let sixteenImg = document.getElementById("sixteen");
-    let seventeenImg = document.getElementById("seventeen");
-    let eighteenImg = document.getElementById("eighteen");
-    let nineteenImg = document.getElementById("nineteen");
-    let twentyImg = document.getElementById("twenty");
-    let numberArr = ["one", "tow", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"];
-    let before2, before1, after2, after1;
-    if (slideIndex < 3) { before2 = slideIndex + 12; } else { before2 = slideIndex - 3; }
-    if (slideIndex < 2) { before1 = slideIndex + 13; } else { before1 = slideIndex - 2; }
-    if (slideIndex > 14) { after1 = slideIndex - 15; } else { after1 = slideIndex; }
-    if (slideIndex > 13) { after2 = slideIndex - 14; } else { after2 = slideIndex + 1; }
+    if (slideIndex < 2) { before2 = slideIndex + 13; } else { before2 = slideIndex - 2; }
+    if (slideIndex < 1) { before1 = slideIndex + 14; } else { before1 = slideIndex - 1; }
+    if (slideIndex > 13) { after1 = slideIndex - 14; } else { after1 = slideIndex + 1; }
+    if (slideIndex > 12) { after2 = slideIndex - 13; } else { after2 = slideIndex + 2; }
 
     sixteenImg.src = document.getElementById(numberArr[before2]).src;
     seventeenImg.src = document.getElementById(numberArr[before1]).src;
-    eighteenImg.src = document.getElementById(numberArr[slideIndex - 1]).src;
+    eighteenImg.src = document.getElementById(numberArr[slideIndex]).src;
     nineteenImg.src = document.getElementById(numberArr[after1]).src;
     twentyImg.src = document.getElementById(numberArr[after2]).src;
 
@@ -47,16 +48,15 @@ function openModal(imgId) {
 
 
 var slideIndex = 1;
-var buttomIndex = 0;
-// showSlides(slideIndex);
 
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
 function currentSlide(n) {
-    slideIndex = n;
+    slideIndex = n - 1;
 }
+
 function currentBottomSlide(n) {
     slideIndex += n;
 }
@@ -70,12 +70,14 @@ function showSlides(n) {
 
     const cardInnerHtml = slides[slideIndex - 1].innerHTML.split(" ");
     let idImg = cardInnerHtml[1];
-    console.log(idImg);
     idImg = idImg.split("=");
-    console.log(idImg);
     idImg = idImg[1].substring(1);
-    console.log(idImg);
     idImg = idImg.slice(0, -1);
-    console.log(idImg);
+
+    if (slideIndex > 15) {
+        slideIndex -= 5;
+    }
+
+    slideIndex -= 1;//slideIndex in numberArr
     openModal(idImg);
 }
